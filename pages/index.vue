@@ -1,9 +1,33 @@
 <template>
     <div>
-        <h2>Home</h2>
-        <p>Harrods Limited is a department store located on Brompton Road in Knightsbridge, London, England. It is currently owned by the state of Qatar via its sovereign wealth fund, the Qatar Investment Authority. The Harrods brand also applies to other enterprises undertaken by the Harrods group of companies, including Harrods Estates, Harrods Aviation and Air Harrods.</p>
-        <p>The store occupies a 5-acre (2 ha) site and has 330 departments covering 1.1 million sq ft (100,000 m2) of retail space. It is one of the largest and most famous department stores in the world.</p>
-    
+        <h2>Four Archons</h2>
+        <div class="row"> 
+            <div class = "column">
+                <div class="card">
+                    <a href="/barbatos"><img src="~/assets/img/barbatos.png" alt=""></a>
+                    <a href="/barbatos">barbatos</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="/morax"><img src="~/assets/img/morax.png" alt=""></a>
+                    <a href="/morax">Morax</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="/beelzebul"><img src="~/assets/img/beelzebul.png" alt=""></a>
+                    <a href="/beelzebul">beezebul</a>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <a href="/buer"><img src="~/assets/img/buer.png" alt=""></a>
+                    <a href="/buer">barbatos</a>
+                </div>
+            </div>
+
+        </div>
     </div>
 </template>
 
@@ -19,5 +43,45 @@
     p {
         margin: 20px 0;
     }
+    * {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 </style>
